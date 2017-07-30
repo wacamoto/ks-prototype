@@ -1,0 +1,46 @@
+- projects = [{"name": "推叩叮","img": "./assets/projects/a.jpg"},{"name": "跑酷吃金幣","img": "./assets/projects/b.jpg"},{"name": "彈力球大賽","img": "./assets/projects/c.jpg"},{"name": "飛機","img": "./assets/projects/d.jpg"},{"name": "飛行訓練","img": "./assets/projects/e.jpg"},{"name": "火箭推進","img": "./assets/projects/f.jpg"},{"name": "終結叩叮","img": "./assets/projects/g.jpg"},{"name": "時鐘","img": "./assets/projects/h.jpg"},{"name": "聖誕樹","img": "./assets/projects/i.jpg"},{"name": "射氣球","img": "./assets/projects/j.jpg"},{"name": "大安森林公園","img": "./assets/projects/k.jpg"},{"name": "電流集集棒","img": "./assets/projects/l.jpg"},{"name": "牛仔對決","img": "./assets/projects/m.jpg"},{"name": "鬼魂","img": "./assets/projects/n.jpg"},{"name": "終極密碼","img": "./assets/projects/o.jpg"},{"name": "月亮公轉","img": "./assets/projects/p.jpg"},{"name": "下雪","img": "./assets/projects/q.jpg"},{"name": "彈力球大賽","img": "./assets/projects/r.jpg"},{"name": "飛行訓練","img": "./assets/projects/s.jpg"},{"name": "殭屍","img": "./assets/projects/t.jpg"},{"name": "時鐘","img": "./assets/projects/u.jpg"},{"name": "皮卡丘打排球","img": "./assets/projects/v.jpg"},{"name": "賽車","img": "./assets/projects/w.jpg"},{"name": "秋名山賽道","img": "./assets/projects/x.jpg"},{"name": "小朋友下樓梯","img": "./assets/projects/y.jpg"},{"name": "射氣球","img": "./assets/projects/z.jpg"}]
+<!DOCTYPE html>
+html lang="en"
+head
+  meta charset="UTF-8"/
+  meta name="viewport" content="width=device-width, initial-scale=1.0"/
+  meta http-equiv="X-UA-Compatible" content="ie=edge"/
+  title Document
+  link rel="stylesheet" href="./lib/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css"/
+  link rel="stylesheet" href="./application.css"/
+  link rel="stylesheet" href="./lib/font-awesome-4.7.0 2/css/font-awesome.css"
+  script src="./lib/bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js"
+body
+  nav.navbar.navbar-toggleable-md
+    a.navbar-brand href="index.html" Koding
+    a href="courses.html" 探索課程
+    a href="projects_all.html" 探索專案
+  .container-fluid.adv style="background-position: center; background-size: cover; background-image: url('./assets/d.jpg')"
+  div.projects-filter
+    .container
+      a.all href="./projects_all.html" 所有
+      a.most-view href="./projects_most_view.html" 最多瀏覽
+      a.most-like href="./projects_most_like.html" 最多愛心
+      a.feature href="./projects_feature.html" 特色專案
+      a.float-right.active href="./projects_my.html" 我的專案    
+  .container.projects-grid
+    .ks-grid
+      - for project in projects
+        .ks-cell.project-card
+          .ks-card
+            a.show href="#"
+              .ks-card-img style="background-image:url('#{project[:img]}')"
+            a.code href="#"
+              i.fa.fa-code
+            a.share href="#"
+              i.fa.fa-share
+            a.delete href="#"
+              i.fa.fa-trash
+            .tags
+              / span.views 576
+          .project-card-detail
+            span.title
+              | #{project[:name]}
+            span.author
+              | by 
+              span style="color:#25aff4" Pikachu 

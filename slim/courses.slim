@@ -1,0 +1,47 @@
+- @courses = [{"name":  "打擊病毒，等你來挑戰!","img": "./assets/a.jpg"},{"name": "挑戰1小時做出 Flappy Bird!","img": "./assets/b.jpg"},{"name": "Scratch 遊戲創作大師","img": "./assets/c.jpg"},{"name": "JavaScript 遊戲製作大師 - 首部曲","img": "./assets/d.jpg"},{"name": "手機遊戲排行榜上的 Doodle Jump，現在你也做得出來囉！","img": "./assets/e.jpg"},{"name": "用 JavaScript 做出下雪動畫！","img": "./assets/f.jpg"},{"name": "什麼！寫程式也能學物理？用 Sratch 做出“砲彈打靶”小遊戲，在空中畫出漂亮的拋物線！","img": "./assets/g.jpg"},{"name": "左閃！右閃！在明快的節拍中閃躲從天而降的方塊吧！","img": "./assets/h.jpg"},{"name": "學習全球最夯的 micro:bit 開發板，進入物聯網世界！小學生就能學！","img": "./assets/i.jpg"},{"name": "療愈系小遊戲 - “撈金魚”","img": "./assets/j.jpg"},{"name": "超級蘑菇人","img": "./assets/k.jpg"},{"name": "「進化吧，小夥伴！」用 Scratch 做出超炫的進化動畫！","img": "./assets/l.jpg"},{"name": "你千萬不能錯過的《別踩白塊兒》","img": "./assets/m.jpg"},{"name": "挑戰記憶王","img": "./assets/n.jpg"},{"name": "咻~弧線戰機來囉","img": "./assets/o.jpg"},{"name": "一小時挑戰 Simon Says 遊戲！搞懂清單觀念！","img": "./assets/p.jpg"},{"name": "用 Scratch 做出經典熱門遊戲 - “挖礦工”！","img": "./assets/q.jpg"},{"name": "經典遊戲製作 - 貪食蛇","img": "./assets/r.jpg"},{"name": "小白闖天關","img": "./assets/s.jpg"}]
+
+<!DOCTYPE html>
+html lang="en"
+head
+  meta charset="UTF-8"/
+  meta name="viewport" content="width=device-width, initial-scale=1.0"/
+  meta http-equiv="X-UA-Compatible" content="ie=edge"/
+  title Document
+  link rel="stylesheet" href="./lib/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css"/
+  link rel="stylesheet" href="./application.css"/
+  link rel="stylesheet" href="./lib/font-awesome-4.7.0 2/css/font-awesome.css"
+  script src="./lib/bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js"
+body
+  nav.navbar.navbar-toggleable-md
+    a.navbar-brand href="index.html" Koding
+    a href="courses.html" 探索課程
+    a href="projects_all.html" 探索專案
+  .container-fluid.adv style="background-position: center; background-size: cover; background-image: url('./assets/d.jpg')"
+  .projects-filter
+    .container
+      a.all.active href="#" JavaScript
+      a.most-view href="#" Scratch
+      a.most-like href="#" Microbit
+      a.feature href="#" Ozobot
+      a.my.float-right href="#" My Courses
+  .container.projects-grid
+    .ks-grid
+      - for course in @courses
+        .ks-cell
+          .ks-card.course-card
+            a href="#"
+              .ks-card-img style="background-image: url('#{course[:img]}')"
+            
+            .tags
+              span.feature 知識點推薦
+            span.title = course[:name]
+            br
+            / button.show
+            /   | 754
+            /   span style="font-size: 0.7em"人 &nbsp;
+            /   i.fa.fa-long-arrow-right
+            
+            button.free
+              | 免費
+              | &nbsp;
+              i.fa.fa-long-arrow-right

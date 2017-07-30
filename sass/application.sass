@@ -1,0 +1,132 @@
+@import 'variables'
+@import 'grid'
+@import 'cards'
+
+body 
+  background-color: #eee
+
+nav
+  background-color: $color-1
+  color: #eee
+  a
+    color: #eee
+    display: inline-block
+    margin: 0px 15px
+
+a
+  color: #555
+  &:hover
+    text-decoration: none
+
+.adv
+  height: 360px
+  background-color: gold
+
+.projects-filter
+  height: 50px
+  box-shadow: 0 1px 2px rgba(0,0,0,0.07)
+  background-color: #fff
+  a
+    display: inline-block
+    box-sizing: border-box
+    height: 50px
+    padding: 2px 10px 0px 10px
+    border-bottom: 3px solid rgba(0,0,0,0)
+    margin-right: 15px
+    line-height: calc(50px - 2px)
+    font-size: 0.9em
+    color: #777
+    &.active
+      border-bottom: 2px solid $color-1
+      color: $color-1
+      &:hover
+        color: $color-1
+  a.float-right
+    float: right
+    margin-right: 0px
+
+.projects-grid
+  padding: 30px 0px
+
+.project-card
+  .ks-card
+    width: 210px
+    .ks-card-img
+      height: 142px
+    a.code,a.share,a.delete
+      position: absolute
+      right: 15px
+      width: 30px
+      height: 30px
+      border-radius: 3px
+      font-size: 0.9em
+      text-align: center
+      line-height: 30px
+      background-color: rgba(50, 50, 50, 0.7)
+      color: rgba(255, 255, 255, 0.9)
+      visibility: hidden
+      transition: background-color 0.1s linear 0s
+  &:hover
+    a.code,a.share,a.delete
+      visibility: visible 
+  a.code
+    top: 15px
+    &:hover
+      background-color: rgba(247, 183, 44, 0.9)
+  a.share
+    top: 50px
+    &:hover
+      background-color: rgba(37, 175, 244, 0.9)
+  a.delete
+    top: 85px
+    &:hover
+      background-color: rgba(238, 54, 52, 0.9)
+
+  .project-card-detail
+    display: inline-block
+    width: 100%
+    padding: 5px 10px
+    box-sizing: border-box
+    .title, .author
+      display: block
+      color: #444
+    .title
+      font-size: .95em
+      font-weight: 500
+    .author
+      font-size: 0.5em
+      font-weight: 400
+      color: #777
+
+.course-card
+  width: 255px
+  height: 285px
+  color: #444
+  .ks-card-img
+    height: 150px
+  .title
+    margin-top: 10px
+    display: block
+    font-size: .95em
+    font-weight: 400
+  button
+    height: 30px
+    box-sizing: border-box
+    position: absolute
+    bottom: 10px
+    left: 50%
+    transform: translateX(-50%)
+    padding: 3px 15px
+    border-radius: 15px
+    
+    border: 2px solid rgba(0,0,0,.05)
+    color: #fff
+    font-size: .95em
+    &.show
+      background-color: gold
+    &.free
+      background-color: #44bc40
+    &:hover
+      // transform: translate(-10%, -10%) scale(1.2, 1.2) 
+      // transform: translateX(-10%)
+
