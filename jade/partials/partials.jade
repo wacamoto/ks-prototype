@@ -1,11 +1,22 @@
 mixin project_filter(active)
   div.projects-filter
     .container
-      a.all(class = active==1?"active":"",href="./projects.html") 所有
-      a.most-view(class = active==2?"active":"",href="./projects_most_view.html") 最多瀏覽
-      a.most-like(class = active==3?"active":"",href="./projects_most_like.html") 最多愛心
-      a.feature(class = active==4?"active":"",href="./projects_feature.html") 特色專案
-      a.float-right(class = active==5?"active":"",href="./projects_my.html") 我的專案
+      span.hidden-md-down
+        a.all(class = active==1?"active":"",href="./projects.html") 所有
+        a.most-view(class = active==2?"active":"",href="./projects_most_view.html") 最多瀏覽
+        a.most-like(class = active==3?"active":"",href="./projects_most_like.html") 最多愛心
+        a.feature(class = active==4?"active":"",href="./projects_feature.html") 特色專案
+      span.hidden-lg-up.dropdown(style="display:inline")
+        span.dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+          | 探索
+        .dropdown-menu(aria-labelledby='dropdownMenuButton')
+          a.dropdown-item(href='./projects_all.html') 所有
+          a.dropdown-item(href='./projects_most_view.html') 最多瀏覽
+          a.dropdown-item(href='./projects_most_like.html') 最多愛心
+          a.dropdown-item(href='./projects_feature.html') 最具特色
+      span.float-right
+        a(class = active==5?"active":"",href="./projects_my.html") 我的專案
+
 
 mixin project_card(project, type, my_project)
   .ks-cell.project-card
@@ -17,14 +28,18 @@ mixin project_card(project, type, my_project)
       a.share(href="#")
         i.fa.fa-share
       if my_project
-        a.delete(href="#")
+        a.delete.js-delete(href="#")
           i.fa.fa-trash
       .tags
         case type
           when 1
-            span.views 576
+            span.views
+              i.fa.fa-eye &nbsp;
+              = Math.floor(Math.random()*500 + 50)
           when 2
-            span.likes 12
+            span.likes
+              i.fa.fa-heart &nbsp;
+              = Math.floor(Math.random()*50)
           when 3
             span.feature
               i.fa.fa-star
@@ -34,31 +49,62 @@ mixin project_card(project, type, my_project)
         | by 
         span(style="color:#25aff4") Pikachu
 
+
 mixin course_filter(active)
   .projects-filter
     .container
-      a(class = active==1?"active":"",href="courses_javascript.html") JavaScript
-      a(class = active==2?"active":"",href="courses_scratch.html") Scratch
-      a(class = active==3?"active":"",href="courses_microbit.html") Microbit
-      a(class = active==4?"active":"",href="courses_ozobot.html") Ozobot
-      a.float-right(class = active==5?"active":"",href="courses_my.html") 我的課程
+      span.hidden-md-down
+        a(class = active==1?"active":"",href="courses_javascript.html") JavaScript
+        a(class = active==2?"active":"",href="courses_scratch.html") Scratch
+        a(class = active==3?"active":"",href="courses_microbit.html") Microbit
+        a(class = active==4?"active":"",href="courses_ozobot.html") Ozobot
+      span.hidden-lg-up.dropdown(style="display:inline")
+        span.dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+          | 探索課程
+        .dropdown-menu(aria-labelledby='dropdownMenuButton')
+          a.dropdown-item(href='./courses_javascript.html') JavaScript
+          a.dropdown-item(href='./courses_scratch.html') Scratch
+          a.dropdown-item(href='./courses_microbit.html') Microbit
+          a.dropdown-item(href='./courses_ozobot.html') Ozobot
+      span.dropdown(style="display:inline;padding:0;margin:0")
+        span.dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+          | 花費時間
+        .dropdown-menu(aria-labelledby='dropdownMenuButton')
+          a.dropdown-item(href='#') 0~2 小時
+          a.dropdown-item(href='#') 2~8 小時
+          a.dropdown-item(href='#') 8 小時以上
+      span.dropdown(style="display:inline;padding:0;margin:0")
+        span.dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+          | 難度
+        .dropdown-menu(aria-labelledby='dropdownMenuButton')
+          a.dropdown-item(href='#') 入門
+          a.dropdown-item(href='#') 進階
+          a.dropdown-item(href='#') 困難
+      span.float-right
+        a(class = active==5?"active":"",href="courses_my.html") 我的課程
 
-mixin course_card(course, type, my_course)
+
+mixin course_card(course, type, my_course, index)
   .ks-cell
     .ks-card.course-card
       a(href="#")
         .ks-card-img(style="background-image: url('" + course.img + "')")
       .tags
-        span.feature 知識點推薦
+        if index <= 3
+          span.recommend 知識點推薦！
       span.title= course.name
       br
       if course.type == 'pay'
         button.ks-btn.ks-btn-yellow
-          | 750
+          = Math.floor(Math.random()*1000 + 50)
           span(style="font-size: 0.5em") 人 &nbsp;
           i.fa.fa-long-arrow-right
-      
-      else
+      if course.type == 'register'
+        .progress
+          .progress-bar.progress-bar-striped.bg-warning(style="width:75%",role="progressbar",aria-valuenow="75",aria-valuemin="0",aria-valuemax="100")
+        button.ks-btn
+          | 繼續上課
+      if course.type == 'free'
         button.ks-btn.ks-btn-green.free
           | 免費
           | &nbsp;

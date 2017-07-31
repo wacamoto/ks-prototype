@@ -4,23 +4,18 @@ var jade = require('gulp-jade');
 var data = require('gulp-data');
 // var slim = require('gulp-slim');
 var gutil = require('gulp-util');
+var minify = require('gulp-minify');
 
 
 
 var jsonData = require('./data/data.json');
 
 
-// gulp.task('slim', function(){
-//   gulp.src("./slim/*.slim")
-//     .pipe(slim({
-//       pretty: true,
-//       data: {
-//         courses: courses
-//       }
-//     }))
-//     .on('error', gutil.log)
-//     .pipe(gulp.dest('./'));
-// });
+gulp.task('scripts', function() {
+    gulp.src('script/index.js')
+        .pipe(minify())
+        .pipe(gulp.dest('./dist/'));
+});
 
 gulp.task('jade', function () {
   gulp.src('./jade/*.jade')
@@ -40,9 +35,9 @@ gulp.task('sass', function() {
 });
 
 gulp.task('watch', function () {
-  // gulp.watch('slim/*.slim',['slim']);
+  gulp.watch('script/*.js',['script']);
   gulp.watch(['jade/*.jade','jade/**/*.jade'],['jade']);
   gulp.watch('sass/*.sass',['sass']);
 });
 
-gulp.task('default', ['jade','sass','watch']);
+gulp.task('default', ['scripts','jade','sass','watch']);

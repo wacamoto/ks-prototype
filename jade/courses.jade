@@ -6,7 +6,7 @@ block content
   +course_filter(1)
   .container.projects-grid
     .ks-grid
-      each course in courses
-        +course_card(course, 0, false)
+      each course, index in courses
+        +course_card(course, 0, false, index)
   div(style="width:100%; padding: 30px")
     button.ks-btn(style="margin: auto; display: block;") 更多課程

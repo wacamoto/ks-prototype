@@ -7,7 +7,5 @@ block content
   .container.projects-grid
     .ks-grid
       each course in courses
-        if course.lang == 'javascript'
-          +course_card(course, 0, true)
-  div(style="width:100%; padding: 30px")
-    button.ks-btn(style="margin: auto; display: block;") 更多課程
+          if course.type == 'register'
+            +course_card(course, 0, true)

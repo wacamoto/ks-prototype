@@ -4,32 +4,44 @@ include ./partials/partials
 block content
   .container-fluid.adv(style="height: calc(100vh - 50px);background-position: center; background-size: cover; background-image: url('../assets/d.jpg')")
     .container
-      .row(style="top: 50vh; position:absolute; transform: translateY(-50%)")
+      .row(style="width:100%; top: 50vh; position:absolute; transform: translateY(-50%)")
         .col-6
           h1(style="color: #fff") 線上兒童程式設計平台
           br
           p(style="color: #fff")
             | 找不到好的程式老師？
             | 教室離家太遠？
+            br
             | 上課時間無法配合？
+            br
             | 現在不會了！
-            | 在叩叮學苑，孩子可以在家輕鬆上網學程式！系統會依據學生的能力推薦合適的課程，讓孩子一步一步，更上一層樓！
+            br
+            | 在叩叮學苑，孩子可以在家輕鬆上網學程式！
+            br
+            | 系統會依據學生的能力推薦合適的課程，
+            br
+            |讓孩子一步一步，更上一層樓！
         .col-6
           div(style="padding: 15px; background-color: rgba(255,255,255,0.5); border-radius: 5px;")
             iframe(width="100%",height="315",src="https://www.youtube.com/embed/75ii5yOLTyk",frameborder="0",allowfullscreen)
 
-  .container.projects-grid
+  .container.projects-grid(style="padding-top:60px")
     h2(style="text-align:center") 推薦課程 
+    p(style="text-align:center") 
+      | 我們根據了您目前完成的
+      a(style="color:#1daed0;cursor:pointer;text-decoration:underline;") 知識點
+      |，推薦了最適合的課程
     .ks-grid
-      each i in [1,2,3,4]
-          +course_card(courses[i], 0, false)
-    div(style="width:100%; padding: 15px")
-      button.ks-btn.ks-btn-yellow(style="margin: auto; display: block;") 更多課程
+      each i in [0,1,2,3]
+        +course_card(courses[i], 0, true, i)
+    //- div(style="width:100%; padding: 15px")
+    //-   button.ks-btn(style="margin: auto; display: block;") 更多課程
   
   .container.projects-grid
     h2(style="text-align:center") 精選專案
+    p(style="text-align:center") 來看看這裡的學生所作出好玩有趣的專案吧！
     .ks-grid
       each i in [1,2,3,4,5,6,7,8,9,10]
-        +project_card(projects[i], 0, false)
-    div(style="width:100%; padding: 15px")
-      button.ks-btn.ks-btn-yellow(style="margin: auto; display: block;") 更多專案
+        +project_card(projects[i], 3, false)
+    //- div(style="width:100%; padding: 15px")
+    //-   button.ks-btn(style="margin: auto; display: block;") 更多專案

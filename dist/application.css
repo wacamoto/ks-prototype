@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
 .ks-grid {
   display: inline-flex;
   width: 100%;
@@ -33,6 +34,9 @@
         background-color: #ee3634; }
       .ks-card .tags span.feature {
         background-color: #ffba1d; }
+      .ks-card .tags span.recommend {
+        background-color: #ff8d1d;
+        font-size: 1.9em; }
 
 .ks-btn {
   box-sizing: content-box;
@@ -52,6 +56,10 @@
     background-color: #1daed0; }
   .ks-btn-green {
     background-color: #44bc40; }
+    .ks-btn-green:hover {
+      background-color: #42af3f; }
+    .ks-btn-green:active {
+      background-color: #44bc40; }
   .ks-btn-blue {
     background-color: #2f53d7; }
     .ks-btn-blue:hover {
@@ -72,15 +80,20 @@
       background-color: #ffba1d; }
 
 body {
-  background-color: #eee; }
+  background-color: #eee;
+  font-family: 'Noto Sans TC', sans-serif;
+  color: #555; }
 
-nav {
-  background-color: #1daed0;
+.navbar {
+  background-color: #1daed0; }
+
+.navbar a.navbar-brand {
   color: #eee; }
-  nav a {
-    color: #eee;
-    display: inline-block;
-    margin: 0px 15px; }
+  .navbar a.navbar-brand:hover {
+    color: #eee; }
+
+.navbar ul.navbar-nav li.nav-item a.nav-link {
+  color: #eee; }
 
 a {
   color: #555; }
@@ -94,21 +107,21 @@ a {
 .projects-filter {
   height: 50px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
-  background-color: #fff; }
-  .projects-filter a {
+  background-color: #fff;
+  font-size: 0.9em; }
+  .projects-filter a, .projects-filter span {
     display: inline-block;
     box-sizing: border-box;
-    height: 50px;
+    height: 48px;
     padding: 2px 10px 0px 10px;
     border-bottom: 3px solid transparent;
     margin-right: 15px;
     line-height: calc(50px - 2px);
-    font-size: 0.9em;
     color: #777; }
-    .projects-filter a.active {
+    .projects-filter a.active, .projects-filter span.active {
       border-bottom: 2px solid #1daed0;
       color: #1daed0; }
-      .projects-filter a.active:hover {
+      .projects-filter a.active:hover, .projects-filter span.active:hover {
         color: #1daed0; }
   .projects-filter a.float-right {
     float: right;
@@ -177,9 +190,18 @@ a {
     margin-top: 10px;
     display: block;
     font-size: .95em;
-    font-weight: 400; }
+    font-weight: 400;
+    height: 40px;
+    overflow: hidden; }
   .course-card button {
     position: absolute;
     bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%); }
+  .course-card .progress {
+    position: absolute;
+    width: 80%;
+    height: 10px;
+    bottom: 60px;
     left: 50%;
     transform: translateX(-50%); }

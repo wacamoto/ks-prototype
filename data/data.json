@@ -145,19 +145,19 @@
     {
       "name": "什麼！寫程式也能學物理？用 Sratch 做出“砲彈打靶”小遊戲，在空中畫出漂亮的拋物線！",
       "img": "../assets/g.jpg",
-      "type": "pay",
+      "type": "register",
       "lang": "scratch"
     },
     {
       "name": "左閃！右閃！在明快的節拍中閃躲從天而降的方塊吧！",
       "img": "../assets/h.jpg",
-      "type": "pay",
+      "type": "register",
       "lang": "scratch"
     },
     {
       "name": "學習全球最夯的 micro:bit 開發板，進入物聯網世界！小學生就能學！",
       "img": "../assets/i.jpg",
-      "type": "pay",
+      "type": "register",
       "lang": "microbit"
     },
     {
