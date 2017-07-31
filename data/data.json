@@ -1,0 +1,224 @@
+{
+  "projects": [
+    {
+      "name": "推叩叮",
+      "img": "../assets/projects/a.jpg"
+    },
+    {
+      "name": "跑酷吃金幣",
+      "img": "../assets/projects/b.jpg"
+    },
+    {
+      "name": "彈力球大賽",
+      "img": "../assets/projects/c.jpg"
+    },
+    {
+      "name": "飛機",
+      "img": "../assets/projects/d.jpg"
+    },
+    {
+      "name": "飛行訓練",
+      "img": "../assets/projects/e.jpg"
+    },
+    {
+      "name": "火箭推進",
+      "img": "../assets/projects/f.jpg"
+    },
+    {
+      "name": "終結叩叮",
+      "img": "../assets/projects/g.jpg"
+    },
+    {
+      "name": "時鐘",
+      "img": "../assets/projects/h.jpg"
+    },
+    {
+      "name": "聖誕樹",
+      "img": "../assets/projects/i.jpg"
+    },
+    {
+      "name": "射氣球",
+      "img": "../assets/projects/j.jpg"
+    },
+    {
+      "name": "大安森林公園",
+      "img": "../assets/projects/k.jpg"
+    },
+    {
+      "name": "電流集集棒",
+      "img": "../assets/projects/l.jpg"
+    },
+    {
+      "name": "牛仔對決",
+      "img": "../assets/projects/m.jpg"
+    },
+    {
+      "name": "鬼魂",
+      "img": "../assets/projects/n.jpg"
+    },
+    {
+      "name": "終極密碼",
+      "img": "../assets/projects/o.jpg"
+    },
+    {
+      "name": "月亮公轉",
+      "img": "../assets/projects/p.jpg"
+    },
+    {
+      "name": "下雪",
+      "img": "../assets/projects/q.jpg"
+    },
+    {
+      "name": "彈力球大賽",
+      "img": "../assets/projects/r.jpg"
+    },
+    {
+      "name": "飛行訓練",
+      "img": "../assets/projects/s.jpg"
+    },
+    {
+      "name": "殭屍",
+      "img": "../assets/projects/t.jpg"
+    },
+    {
+      "name": "時鐘",
+      "img": "../assets/projects/u.jpg"
+    },
+    {
+      "name": "皮卡丘打排球",
+      "img": "../assets/projects/v.jpg"
+    },
+    {
+      "name": "賽車",
+      "img": "../assets/projects/w.jpg"
+    },
+    {
+      "name": "秋名山賽道",
+      "img": "../assets/projects/x.jpg"
+    },
+    {
+      "name": "小朋友下樓梯",
+      "img": "../assets/projects/y.jpg"
+    },
+    {
+      "name": "射氣球",
+      "img": "../assets/projects/z.jpg"
+    }
+  ],
+  "courses": [
+    {
+      "name": "打擊病毒，等你來挑戰!",
+      "img": "../assets/a.jpg",
+      "type": "free",
+      "lang": "scratch"
+    },
+    {
+      "name": "挑戰1小時做出 Flappy Bird!",
+      "img": "../assets/b.jpg",
+      "type": "free",
+      "lang": "javascript"
+    },
+    {
+      "name": "Scratch 遊戲創作大師",
+      "img": "../assets/c.jpg",
+      "type": "free",
+      "lang": "scratch"
+    },
+    {
+      "name": "JavaScript 遊戲製作大師 - 首部曲",
+      "img": "../assets/d.jpg",
+      "type": "pay",
+      "lang": "javascript"
+    },
+    {
+      "name": "手機遊戲排行榜上的 Doodle Jump，現在你也做得出來囉！",
+      "img": "../assets/e.jpg",
+      "type": "pay",
+      "lang": "scratch"
+    },
+    {
+      "name": "用 JavaScript 做出下雪動畫！",
+      "img": "../assets/f.jpg",
+      "type": "pay",
+      "lang": "javascript"
+    },
+    {
+      "name": "什麼！寫程式也能學物理？用 Sratch 做出“砲彈打靶”小遊戲，在空中畫出漂亮的拋物線！",
+      "img": "../assets/g.jpg",
+      "type": "pay",
+      "lang": "scratch"
+    },
+    {
+      "name": "左閃！右閃！在明快的節拍中閃躲從天而降的方塊吧！",
+      "img": "../assets/h.jpg",
+      "type": "pay",
+      "lang": "scratch"
+    },
+    {
+      "name": "學習全球最夯的 micro:bit 開發板，進入物聯網世界！小學生就能學！",
+      "img": "../assets/i.jpg",
+      "type": "pay",
+      "lang": "microbit"
+    },
+    {
+      "name": "療愈系小遊戲 - “撈金魚”",
+      "img": "../assets/j.jpg",
+      "type": "pay",
+      "lang": "javscript"
+    },
+    {
+      "name": "超級蘑菇人",
+      "img": "../assets/k.jpg",
+      "type": "pay",
+      "lang": "scratch"
+    },
+    {
+      "name": "「進化吧，小夥伴！」用 Scratch 做出超炫的進化動畫！",
+      "img": "../assets/l.jpg",
+      "type": "pay",
+      "lang": "scratch"
+    },
+    {
+      "name": "你千萬不能錯過的《別踩白塊兒》",
+      "img": "../assets/m.jpg",
+      "type": "pay",
+      "lang": "scratch"
+    },
+    {
+      "name": "挑戰記憶王",
+      "img": "../assets/n.jpg",
+      "type": "pay",
+      "lang": "javascript"
+    },
+    {
+      "name": "咻~弧線戰機來囉",
+      "img": "../assets/o.jpg",
+      "type": "pay",
+      "lang": "javascript"
+    },
+    {
+      "name": "一小時挑戰 Simon Says 遊戲！搞懂清單觀念！",
+      "img": "../assets/p.jpg",
+      "type": "pay",
+      "lang": "javascript"
+    },
+    {
+      "name": "用 Scratch 做出經典熱門遊戲 - “挖礦工”！",
+      "img": "../assets/q.jpg",
+      "type": "pay",
+      "lang": "scratch"
+    },
+    {
+      "name": "經典遊戲製作 - 貪食蛇",
+      "img": "../assets/r.jpg",
+      "type": "pay",
+      "lang": "javascript"
+    },
+    {
+      "name": "小白闖天關",
+      "img": "../assets/s.jpg",
+      "type": "pay",
+      "lang": "scratch"
+    }
+  ]
+}

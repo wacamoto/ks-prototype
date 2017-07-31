@@ -1,3 +1,43 @@
 .ks-btn
-  border: 0px
-  border-radius: 15px
+  box-sizing: content-box
+  height: 30px
+  border: 2px solid rgba(255,255,255,.5)
+  border-radius: 18px
+  padding: 0px 15px
+  color: #fff
+  font-size: 1em
+  cursor: pointer
+  &:focus
+    outline: 0
+
+  background-color: $color-1
+  &:hover
+    background-color: $color-1-deep
+  &:active
+    background-color: $color-1
+  
+  &-sm
+  &-lg
+
+  &-green
+    background-color: $color-6
+
+
+  &-blue
+    background-color: $color-2
+    &:hover
+      background-color: $color-2-deep
+    &:active
+      background-color: $color-2
+  &-orange
+    background-color: $color-3
+    &:hover
+      background-color: $color-3-deep
+    &:active
+      background-color: $color-3
+  &-yellow
+    background-color: $color-4
+    &:hover
+      background-color: $color-4-deep
+    &:active
+      background-color: $color-4

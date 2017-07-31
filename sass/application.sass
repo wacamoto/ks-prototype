@@ -1,6 +1,7 @@
 @import 'variables'
 @import 'grid'
 @import 'cards'
+@import 'button'
 
 body 
   background-color: #eee
@@ -49,6 +50,7 @@ a
   padding: 30px 0px
 
 .project-card
+  text-align: center
   .ks-card
     width: 210px
     .ks-card-img
@@ -99,8 +101,9 @@ a
       color: #777
 
 .course-card
+  text-align: center
   width: 255px
-  height: 285px
+  height: 295px
   color: #444
   .ks-card-img
     height: 150px
@@ -110,23 +113,7 @@ a
     font-size: .95em
     font-weight: 400
   button
-    height: 30px
-    box-sizing: border-box
     position: absolute
-    bottom: 10px
+    bottom: 15px
     left: 50%
     transform: translateX(-50%)
-    padding: 3px 15px
-    border-radius: 15px
-    
-    border: 2px solid rgba(0,0,0,.05)
-    color: #fff
-    font-size: .95em
-    &.show
-      background-color: gold
-    &.free
-      background-color: #44bc40
-    &:hover
-      // transform: translate(-10%, -10%) scale(1.2, 1.2) 
-      // transform: translateX(-10%)
-

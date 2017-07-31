@@ -1,0 +1,13 @@
+extends ./layout/layout
+include ./partials/partials
+
+block content
+  .container-fluid.adv(style="background-position: center; background-size: cover; background-image: url('../assets/d.jpg')")
+  +course_filter(3)
+  .container.projects-grid
+    .ks-grid
+      each course in courses
+        if course.lang == 'microbit'
+          +course_card(course, 3, false)
+  div(style="width:100%; padding: 30px")
+    button.ks-btn(style="margin: auto; display: block;") 更多課程

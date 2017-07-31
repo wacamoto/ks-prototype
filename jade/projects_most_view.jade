@@ -1,0 +1,14 @@
+extends ./layout/layout
+include ./partials/partials
+
+block content
+  .container-fluid.adv(style="background-position: center; background-size: cover; background-image: url('../assets/d.jpg')")
+  +project_filter(2)
+
+  .container.projects-grid
+    .ks-grid
+      each project in projects
+        +project_card(project, 1, false)
+        
+    div(style="width:100%; padding: 30px")
+      button.ks-btn(style="margin: auto; display: block;") 更多專案

@@ -1,0 +1,65 @@
+mixin project_filter(active)
+  div.projects-filter
+    .container
+      a.all(class = active==1?"active":"",href="./projects.html") 所有
+      a.most-view(class = active==2?"active":"",href="./projects_most_view.html") 最多瀏覽
+      a.most-like(class = active==3?"active":"",href="./projects_most_like.html") 最多愛心
+      a.feature(class = active==4?"active":"",href="./projects_feature.html") 特色專案
+      a.float-right(class = active==5?"active":"",href="./projects_my.html") 我的專案
+
+mixin project_card(project, type, my_project)
+  .ks-cell.project-card
+    .ks-card
+      a.show(href="#")
+        .ks-card-img(style="background-image:url('" + project.img + "')")
+      a.code(href="#")
+        i.fa.fa-code
+      a.share(href="#")
+        i.fa.fa-share
+      if my_project
+        a.delete(href="#")
+          i.fa.fa-trash
+      .tags
+        case type
+          when 1
+            span.views 576
+          when 2
+            span.likes 12
+          when 3
+            span.feature
+              i.fa.fa-star
+    .project-card-detail
+      span.title= project.name 
+      span.author
+        | by 
+        span(style="color:#25aff4") Pikachu
+
+mixin course_filter(active)
+  .projects-filter
+    .container
+      a(class = active==1?"active":"",href="courses_javascript.html") JavaScript
+      a(class = active==2?"active":"",href="courses_scratch.html") Scratch
+      a(class = active==3?"active":"",href="courses_microbit.html") Microbit
+      a(class = active==4?"active":"",href="courses_ozobot.html") Ozobot
+      a.float-right(class = active==5?"active":"",href="courses_my.html") 我的課程
+
+mixin course_card(course, type, my_course)
+  .ks-cell
+    .ks-card.course-card
+      a(href="#")
+        .ks-card-img(style="background-image: url('" + course.img + "')")
+      .tags
+        span.feature 知識點推薦
+      span.title= course.name
+      br
+      if course.type == 'pay'
+        button.ks-btn.ks-btn-yellow
+          | 750
+          span(style="font-size: 0.5em") 人 &nbsp;
+          i.fa.fa-long-arrow-right
+      
+      else
+        button.ks-btn.ks-btn-green.free
+          | 免費
+          | &nbsp;
+          i.fa.fa-long-arrow-right
